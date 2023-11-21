@@ -89,6 +89,8 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #2196F3;
 }
+
+/*Liste article*/
 #wrapperArticle{
     display:flex;
     justify-content:center;
@@ -102,7 +104,12 @@ article{
     border-radius: 10px;
     width: 50vw;
 }
-
+.edit{
+    color:blue;
+}
+.delete{
+    color:red;
+}
 /*RESPONSIVE*/
 @media only screen and (max-width: 767px) {
     /* Styles spécifiques pour les mobiles */
