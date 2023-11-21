@@ -1,0 +1,119 @@
+/*HEADER*/
+header nav ul li a:hover{
+    color: #000;
+}
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li{
+    list-style-type: none;
+}
+header nav ul{
+    display: flex;
+    gap:10px;
+}
+header{
+    background-color:rgb(128, 128, 255);
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+/*GENERAL*/
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    font-family:Helvetica;
+    margin: 0px;
+    padding: 0px;
+}
+form{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    gap:10px; 
+}
+.success{
+    background-color: #2cf256;
+    color:green;
+    padding:10px;
+    border-radius:3px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+textarea {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #2196F3;
+    outline: none;
+}
+
+input[type="submit"]{
+    background-color: #1266F2;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover{
+    background-color: #2196F3;
+}
+#wrapperArticle{
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+}
+article{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 50vw;
+}
+
+/*RESPONSIVE*/
+@media only screen and (max-width: 767px) {
+    /* Styles spécifiques pour les mobiles */
+    #wrapperArticle{
+        padding: 20px;
+    }
+    header nav ul{
+        flex-direction: column;
+        gap:15px;
+    }
+    article{
+        width: 90vw;
+    }
+}
