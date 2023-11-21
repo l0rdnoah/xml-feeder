@@ -103,12 +103,34 @@ article{
     padding: 10px;
     border-radius: 10px;
     width: 50vw;
+    display: flex;
+    justify-content: center;
 }
-.edit{
+.article-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-basis:80%;
+}
+.article-wrapper input{
+    width: 80%;
+}
+.btn-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.edit,.undo{
     color:blue;
 }
 .delete{
     color:red;
+}
+.confirm{
+    color:green;
 }
 /*RESPONSIVE*/
 @media only screen and (max-width: 767px) {

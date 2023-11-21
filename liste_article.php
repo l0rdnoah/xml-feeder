@@ -40,8 +40,6 @@ function updateRecord(date) {
 function validerModif(date){
     let valeurTitre = document.getElementById("editTitre" + date).value;
     let valeurContenu = document.getElementById("editContenu" + date).value;
-    alert(valeurTitre);
-    alert(valeurContenu);
     window.location.href = 'update_article.php?date=' + date + '&titre=' + encodeURIComponent(valeurTitre) + '&contenu=' + encodeURIComponent(valeurContenu);
 }
 
@@ -78,14 +76,17 @@ function annulerModif(date){
         $nbArticle = count($article->article);
         
         foreach ($article->article as $article){
-            echo "<article><p id='titre" . $article->date . "'>" . $article->titre . "</p>";
+            echo "<article>";
+            echo "<div class='article-wrapper'><p id='titre" . $article->date . "'>" . $article->titre . "</p>";
             echo "<p id='contenu". $article->date . "'>" . $article->contenu . "</p>";
             echo "<input type='text' id='editTitre".$article->date."' style='display:none'>";
-            echo "<input type='text' id='editContenu".$article->date."' style='display:none'>";
+            echo "<input type='text' id='editContenu".$article->date."' style='display:none'></div>";
+            echo "<div class='btn-wrapper'>";
             echo "<p id='edit".$article->date."' class='edit' onclick='updateRecord(\"".$article->date."\")'>Modifier</p>"; 
-            echo "<p id='validerModif".$article->date."' onclick='validerModif(\"".$article->date."\")' style='display:none'>Valider</p>"; 
-            echo "<p id='annulerModif".$article->date."' onclick='annulerModif(\"".$article->date."\")' style='display:none'>Annuler</p>"; 
+            echo "<p class='confirm' id='validerModif".$article->date."' onclick='validerModif(\"".$article->date."\")' style='display:none'>Valider</p>"; 
+            echo "<p class='undo' id='annulerModif".$article->date."' onclick='annulerModif(\"".$article->date."\")' style='display:none'>Annuler</p>"; 
             echo "<p class='delete' onclick='deleteRecord(\"".$article->date."\")'>Supprimer</p></article>"; 
+            echo "</div>";
         }
     ?>
     </div>
